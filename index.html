@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <!-- saved from url=(0112)https://service.bupt.edu.cn/v2/matter/m_start?id=568&type=1&campus=%E8%A5%BF%E5%9C%9F%E5%9F%8E%E6%A0%A1%E5%8C%BA -->
-<html lang="zh-cn" style="font-size: 106.667px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"><title>请假外出、返校权限查询通行码</title><style>body{-webkit-text-size-adjust:100% !important;}</style><script>(function() {
-    if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+<html lang="zh-cn" style="font-size: 106.667px;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>请假外出、返校权限查询通行码</title>
+  <style>
+    body {
+      -webkit-text-size-adjust: 100% !important;
+    }
+  </style>
+  <script>(function () {
+      if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
         handleFontSize();
-    } else {
+      } else {
         if (document.addEventListener) {
-            document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+          document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
         } else if (document.attachEvent) {
-            document.attachEvent("WeixinJSBridgeReady", handleFontSize);
-            document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+          document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+          document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
         }
-    }
-    function handleFontSize() {
-        WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
-        WeixinJSBridge.on('menu:setfont', function() {
-            WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
+      }
+      function handleFontSize() {
+        WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize': 0 });
+        WeixinJSBridge.on('menu:setfont', function () {
+          WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize': 0 });
         });
-    }
-    })();</script><script>/**
-     * 发送页面性能监听请求
-     * type: 1:接口响应时间；2：index.html访问到的时间点；3：页面js加载完成，开始调用接口时间点
-     */
-    function postTimeLine(type, params){
+      }
+    })();</script>
+  <script>/**
+* 发送页面性能监听请求
+* type: 1:接口响应时间；2：index.html访问到的时间点；3：页面js加载完成，开始调用接口时间点
+*/
+    function postTimeLine(type, params) {
       //是否已经开始当前客户端调试
-      if(!localStorage.getItem('openPostTimeLine')) return false;
+      if (!localStorage.getItem('openPostTimeLine')) return false;
 
       var uidKey = 'postTimeLine',
-          uid = localStorage.getItem(uidKey);
+        uid = localStorage.getItem(uidKey);
 
       params = params ? params : {};
       params.nowTime = (new Date()).getTime();
@@ -34,13 +47,13 @@
       params.useTime = params.useTime ? params.useTime : 0;
 
       var data = new FormData();
-        data.append('type', type);
-        data.append('uid', uid);
-        data.append('data', JSON.stringify(params));
+      data.append('type', type);
+      data.append('uid', uid);
+      data.append('data', JSON.stringify(params));
 
-        var xhr = new XMLHttpRequest();
-        xhr.open('post', location.protocol + "//" + location.hostname + '/api/debug/log');
-        xhr.send(data)
+      var xhr = new XMLHttpRequest();
+      xhr.open('post', location.protocol + "//" + location.hostname + '/api/debug/log');
+      xhr.send(data)
     }
     postTimeLine(2);
 
@@ -91,7 +104,9 @@
           }
         }, 300);
       }
-    }</script><style>.frame_load_img {
+    }</script>
+  <style>
+    .frame_load_img {
       display: inline-block;
       width: 50px;
       animation: haha1 1.5s linear infinite;
@@ -130,33 +145,40 @@
 
     #__vconsole .vc-content {
       line-height: 12px;
-    }</style><script src="./请假外出、返校权限查询通行码_files/jweixin-1.3.2.js.下载"></script><script src="./请假外出、返校权限查询通行码_files/jquery@3.6.0.min.js.下载"></script><script src="./请假外出、返校权限查询通行码_files/vue@2.6.10.min.js.下载"></script><script src="./请假外出、返校权限查询通行码_files/element-ui@2.13.0.min.js.下载"></script><link rel="stylesheet" href="./请假外出、返校权限查询通行码_files/element-ui@2.13.0.min.css"><script>//刷新页面
+    }
+  </style>
+  <script src="./index_files/jweixin-1.3.2.js.下载"></script>
+  <script src="./index_files/jquery@3.6.0.min.js.下载"></script>
+  <script src="./index_files/vue@2.6.10.min.js.下载"></script>
+  <script src="./index_files/element-ui@2.13.0.min.js.下载"></script>
+  <link rel="stylesheet" href="./index_files/element-ui@2.13.0.min.css">
+  <script>//刷新页面
     function reloadNowPage(nowSourceV) {
       var search = window.location.search,
-          searchArr = search.indexOf("?") !== -1 ? search.replace('?', '').split("&") : [],
-          nowSearchArr = [],
-          nowSearch = [];
+        searchArr = search.indexOf("?") !== -1 ? search.replace('?', '').split("&") : [],
+        nowSearchArr = [],
+        nowSearch = [];
 
-      for(var index in searchArr) {
-        if(searchArr[index].indexOf("appSourceV") !== 0) {
+      for (var index in searchArr) {
+        if (searchArr[index].indexOf("appSourceV") !== 0) {
           nowSearchArr.push(searchArr[index]);
         }
       }
 
-      nowSearchArr.push("appSourceV="+nowSourceV);
-      nowSearch = "?"+nowSearchArr.join("&");
+      nowSearchArr.push("appSourceV=" + nowSourceV);
+      nowSearch = "?" + nowSearchArr.join("&");
 
       window.location.replace(
-        window.location.protocol+"//"
-        +window.location.host
-        +window.location.pathname
-        +nowSearch
-        +window.location.hash
+        window.location.protocol + "//"
+        + window.location.host
+        + window.location.pathname
+        + nowSearch
+        + window.location.hash
       );
     }
 
     //获取指定参数值
-    function getQuery (name) {
+    function getQuery(name) {
       var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
       var r = window.location.search.substr(1).match(reg);
 
@@ -164,37 +186,445 @@
     }
 
     var nowSourceV = 1660720566056,
-        paramsSourceV = getQuery("appSourceV");
-    
+      paramsSourceV = getQuery("appSourceV");
+
     paramsSourceV = paramsSourceV ? paramsSourceV : 0;
-    if('production' == 'production') {
+    if ('production' == 'production') {
       $.ajax({
-      url: "/v2/static/version.js?v="+(new Date()).getTime(),
-      method: 'GET',
-      dataType: 'json',
-      async: false,
-      success: function(res) {
-        if(paramsSourceV !== res.version) {
-          if(res.version != nowSourceV) {
-            reloadNowPage(res.version);
+        url: "/v2/static/version.js?v=" + (new Date()).getTime(),
+        method: 'GET',
+        dataType: 'json',
+        async: false,
+        success: function (res) {
+          if (paramsSourceV !== res.version) {
+            if (res.version != nowSourceV) {
+              reloadNowPage(res.version);
+            }
+          } else {
+            console.log("获取到的版本文件为最新文件，和最新版本不对应");
           }
-        } else {
-          console.log("获取到的版本文件为最新文件，和最新版本不对应");
+        },
+        error: function (error) {
+          console.log(error);
         }
-      },
-      error: function(error) {
-        console.log(error);
-      }
-    })
-    }</script><meta name="sourceV" content="1660720566056"><meta name="envWebId" content="bupt"><link href="./请假外出、返校权限查询通行码_files/chunk-vendors.265f8c2363325d23e7c6.css" rel="stylesheet"><link href="./请假外出、返校权限查询通行码_files/chunk-common.1f399c92192cc38fce13.css" rel="stylesheet"><link rel="shortcut icon" href="https://imgservice.bupt.edu.cn/all/1/3333.jpg"><link rel="stylesheet" type="text/css" href="./请假外出、返校权限查询通行码_files/chunk-bbbfe64c.e106198c47ec127376fe.css"><script charset="utf-8" src="./请假外出、返校权限查询通行码_files/chunk-bbbfe64c.62b0e291d22f2fd59bbe.js.下载"></script><link rel="stylesheet" type="text/css" href="./请假外出、返校权限查询通行码_files/chunk-3dd7a085.b4f5756e01a6fac8c3d5.css"><script charset="utf-8" src="./请假外出、返校权限查询通行码_files/chunk-3dd7a085.9dd40a92550c4bbd5fa3.js.下载"></script><script charset="utf-8" src="./请假外出、返校权限查询通行码_files/chunk-42bdde2c.b8e22702f438cf770e47.js.下载"></script><link rel="stylesheet" type="text/css" href="./请假外出、返校权限查询通行码_files/chunk-cb5ee0e0.0f0f3dfc443a01cddbd6.css"><script charset="utf-8" src="./请假外出、返校权限查询通行码_files/chunk-cb5ee0e0.df28ac242c319259c7f2.js.下载"></script><link rel="stylesheet" type="text/css" href="./请假外出、返校权限查询通行码_files/chunk-9e1ccf30.149e519c72832e85e9de.css"><script charset="utf-8" src="./请假外出、返校权限查询通行码_files/chunk-9e1ccf30.5194f921f5305c490757.js.下载"></script></head><body class="site_mobile_common" data-new-gr-c-s-check-loaded="14.1020.0" data-gr-ext-installed=""><div id="wxform"><!----> <div class="forms"><div style="height: 0px;"></div> <!----> <div class="toptabla"><div class="toptabla_con"><div class="formsTop_left"><i class="iconfont icon-biaodanyemian"></i> <p class="">请假外出、返校权限查询</p></div> <!----></div></div> <div id="pubilcForms"><div><div element-loading-custom-class="area-vloading" class="m_formList"><!----><div class=""><div class="pluginnames"><span style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">姓名</span> <!----></div> <!----> <div class="plugin-allbox"><div data-key="User_3" class="dplugin-box" style="margin-top: 0px; margin-bottom: 0px; text-align: center;"><div class="dplugin-mobile dplugin-doneplugin dplugin-mobile-dinput"><span class="doneplugin-value doneplugin-value-userview" style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 15px; letter-spacing: 0px;">
-						李文动
-					</span></div></div> <!----></div></div><!----><!----><div class=""><div class="pluginnames"><span style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">照片</span> <!----></div> <!----> <div class="plugin-allbox"><div data-key="Avatar_41" class="dplugin-box" style="margin-top: 0px; margin-bottom: 0px; text-align: center;"><div class="dplugin-mobile dplugin-mobile-dAvatar"><div class="dplugin-mobile-addfileed-box"><ul id="avatar_Avatar_41_image"><li class="dplugin-mobile-addfileed" style="width: 1rem; height: auto;"><img src="./请假外出、返校权限查询通行码_files/3716690_zuiwmy6p8ip5.jpg"> <!----></li></ul></div> <!----> <div class="clear"></div></div> <!----> <!----></div> <!----></div></div><div class="mobile_pluginnames_hide"><div class="pluginnames"><span style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">动态图</span> <!----></div> <!----> <div class="plugin-allbox"><div data-key="Image_36" class="dplugin-box" style="margin-top: 0px; margin-bottom: 0px; text-align: left;"><div class="dplugin-mobile dplugin-mobile-dImage dImageview"><img src="./请假外出、返校权限查询通行码_files/3916676.gif" style="width: 100%; height: 100%;"></div> <!----> <!----></div> <!----></div></div><div class=""><div class="pluginnames"><span style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">状态码</span> <!----></div> <!----> <div data-v-0f1589c3="" class="plugin-allbox" plugin="[object Object]"><div data-v-0f1589c3="" data-key="Qrcode_11" class="dplugin-box" style="margin-top: 0px; margin-bottom: 0px; width: 100%; text-align: center; height: 100%; overflow-x: auto;"><div data-v-0f1589c3="" class="dplugin-mobile"><div data-v-0f1589c3="" class=""><canvas data-v-0f1589c3="" id="Qrcode_11_qrcodecanvas" height="150" width="150" style="height: 150px; width: 150px;"></canvas></div></div></div> <!----></div></div><div class="mobile_pluginnames_hide"><div class="pluginnames"><span style="color: rgb(135, 135, 135); font-size: 18px; font-family: 微软雅黑; line-height: 22px;">状态</span> <!----></div> <!----> <div class="plugin-allbox"><div data-key="Input_12" class="dplugin-box" style="margin-top: 0px; margin-bottom: 0px; text-align: center;"><div class="dplugin-mobile dplugin-mobile-dinput dinput-vie dplugin-mobile-dinput-focusalert" style="font-size: 18px; font-family: 微软雅黑; font-weight: bold; font-style: normal; color: red; text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;"><span class="plugin-data" style="font-size: 18px; font-family: 微软雅黑; font-weight: bold; font-style: normal; color: red; text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;">不允许出校</span></div></div> <!----></div></div><div class=""><div class="pluginnames"><span style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">学工号</span> <!----></div> <!----> <div class="plugin-allbox"><div data-key="User_5" class="dplugin-box" style="margin-top: 0px; margin-bottom: 0px; text-align: center;"><div class="dplugin-mobile dplugin-doneplugin dplugin-mobile-dinput"><span class="doneplugin-value doneplugin-value-userview" style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 15px; letter-spacing: 0px;">
-						2019211953
-					</span></div></div> <!----></div></div><!----><div class=""><div class="pluginnames"><span style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">出入校时间</span> <!----></div> <!----> <div class="plugin-allbox"><div data-key="Calendar_15" class="dplugin-box" style="margin-top: 0px; margin-bottom: 0px; text-align: center;"><div class="dplugin-mobile dplugin-mobile-dCalendar dCalendar-vie" style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;"><span style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;">2022-08-24 20:11:41</span></div></div> <!----></div></div><div class=""><div class="pluginnames"><span style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">学院</span> <!----></div> <!----> <div class="plugin-allbox"><div data-key="User_22" class="dplugin-box" style="margin-top: 0px; margin-bottom: 0px; text-align: center;"><div class="dplugin-mobile dplugin-doneplugin dplugin-mobile-dinput"><span class="doneplugin-value doneplugin-value-userview" style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 15px; letter-spacing: 0px;">
-						计算机学院（国家示范性软件学院）
-					</span></div></div> <!----></div></div><!----><!----><!----><!----><!----><!----><!----><div class=""><div class="pluginnames"><span style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">扫码校区</span> <!----></div> <!----> <div class="plugin-allbox"><div data-key="Input_44" class="dplugin-box" style="margin-top: 0px; margin-bottom: 0px; text-align: center;"><div class="dplugin-mobile dplugin-mobile-dinput dinput-vie dplugin-mobile-dinput-focusalert" style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;"><span class="plugin-data" style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;">&nbsp;</span></div></div> <!----></div></div> <div style="display: none;"><ul><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><li><span>动态转化：</span> <div data-key="Conversion_17" class="dplugin-box" style="margin-top: 0px; margin-bottom: 0px; text-align: left;"><!----></div></li><!----><!----><!----><li><span>数据源：</span> <div data-key="DataSource_23" class="dplugin-box" plugin="[object Object]" style="margin-top: 0px; margin-bottom: 0px; text-align: left;"><div><div class="el-dialog__wrapper" style="display: none;"><div role="dialog" aria-modal="true" aria-label="选择数据" class="el-dialog el-dialog--center rTbaleDialog" style="margin-top: 15vh; width: 90%;"><div class="el-dialog__header"><span class="el-dialog__title">选择数据</span><!----></div><!----><div class="el-dialog__footer"><span class="dialog-footer"><button type="button" class="el-button el-button--default el-button--small"><!----><!----><span>取 消</span></button> <button type="button" class="el-button el-button--primary el-button--small"><!----><!----><span>确 定</span></button></span></div></div></div></div></div></li><li><span>验证信息：</span> <div data-key="Validate_24" class="dplugin-box" style="margin-top: 0px; margin-bottom: 0px; text-align: left;"><!----></div></li><li><span>提示：</span> <div data-key="Alert_25" class="dplugin-box" plugin="[object Object]" style="margin-top: 0px; margin-bottom: 0px; text-align: left;"><!----> <div class="el-dialog__wrapper" style="display: none;"><div role="dialog" aria-modal="true" aria-label="禁止扫码" class="el-dialog sele_leave" style="margin-top: 15vh; width: 310px;"><div class="el-dialog__header"><span class="el-dialog__title">禁止扫码</span><!----></div><!----><!----></div></div></div></li><li><span>提示：</span> <div data-key="Alert_26" class="dplugin-box" plugin="[object Object]" style="margin-top: 0px; margin-bottom: 0px; text-align: left;"><!----> <div class="el-dialog__wrapper" style="display: none;"><div role="dialog" aria-modal="true" aria-label="禁止扫码" class="el-dialog sele_leave" style="margin-top: 15vh; width: 310px;"><div class="el-dialog__header"><span class="el-dialog__title">禁止扫码</span><!----></div><!----><!----></div></div></div></li><!----><!----><!----><!----><!----><!----><!----></ul></div><div class="el-loading-mask area-vloading" style="display: none;"><div class="el-loading-spinner"><svg viewBox="25 25 50 50" class="circular"><circle cx="50" cy="50" r="20" fill="none" class="path"></circle></svg><!----></div></div></div> <!----></div></div> <!----> <div class="wxformbtn m_start_btn"><button class="draftdiv active">更多</button> <div id="[object Object]" class="wxformbtn_center"><!----></div> <!----></div></div> <div class="processimg"><img src="data:image/png;base64,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" alt="" class="imgbtn"> <div class="svg"></div></div> <div class="showBpmn_class" style="display: none;"></div> <div class="draftbox" style="display: none;"><div class="bg"></div> <ul><li>载入草稿</li> <li id="savedraft">保存到草稿箱</li> <li>取消</li></ul></div> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <div class="el-dialog__wrapper" style="display: none;"><div role="dialog" aria-modal="true" aria-label="添加人员" class="el-dialog el-dialog--center dialog_search_user" style="margin-top: 15vh; width: 300px;"><div class="el-dialog__header"><span class="el-dialog__title">添加人员</span><button type="button" aria-label="Close" class="el-dialog__headerbtn"><i class="el-dialog__close el-icon el-icon-close"></i></button></div><!----><div class="el-dialog__footer"><span class="dialog-footer"><button type="button" class="el-button el-button--default"><!----><!----><span>取 消</span></button> <button type="button" class="el-button el-button--primary"><!----><!----><span>确 定</span></button></span></div></div></div> <div class="el-dialog__wrapper" style="display: none;"><div role="dialog" aria-modal="true" aria-label="dialog" class="el-dialog el-dialog--center dialog_agent_depart" style="margin-top: 15vh; width: 300px;"><div class="el-dialog__header"><span class="el-dialog__title"></span><button type="button" aria-label="Close" class="el-dialog__headerbtn"><i class="el-dialog__close el-icon el-icon-close"></i></button></div><!----><div class="el-dialog__footer"><span class="dialog-footer"><button type="button" class="el-button el-button--default"><!----><!----><span>取 消</span></button> <button type="button" class="el-button el-button--primary"><!----><!----><span>确 定</span></button></span></div></div></div> <!----> <div class="el-dialog__wrapper" style="display: none;"><div role="dialog" aria-modal="true" aria-label="dialog" class="el-dialog" style="margin-top: 15vh; width: 80%;"><div class="el-dialog__header"><span class="el-dialog__title"></span><!----></div><!----><!----></div></div> <div><div class="el-dialog__wrapper" style="display: none;"><div role="dialog" aria-modal="true" aria-label="提示" class="el-dialog el-dialog--center common_tip_dialog submit_layer" style="margin-top: 15vh;"><div class="el-dialog__header"><span class="el-dialog__title">提示</span><!----></div><!----><div class="el-dialog__footer"><span class="dialog-footer"><button class="zl-button zl-button-line zl-button-auto zl-button-mini">返回修改 <i class="iconfont iconarrowdown"></i></button>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-      <button class="zl-button zl-button-primary zl-button-fixed zl-button-mini">确定 <i class="iconfont iconarrowdown"></i></button></span></div></div></div></div> <!----> <!----> <!----> <svg viewBox="25 25 50 50" class="dataSourceLoading" style="display: none;"><circle cx="50" cy="50" r="20" fill="none" class="path"></circle></svg></div><iframe id="printCasLogout" style="display: none;" src="./请假外出、返校权限查询通行码_files/saved_resource.html"></iframe><script>if (window.location.href.indexOf("debug=1") !== -1) {
+      })
+    }</script>
+  <meta name="sourceV" content="1660720566056">
+  <meta name="envWebId" content="bupt">
+  <link href="./index_files/chunk-vendors.265f8c2363325d23e7c6.css" rel="stylesheet">
+  <link href="./index_files/chunk-common.1f399c92192cc38fce13.css" rel="stylesheet">
+  <link rel="shortcut icon" href="https://imgservice.bupt.edu.cn/all/1/3333.jpg">
+  <link rel="stylesheet" type="text/css" href="./index_files/chunk-bbbfe64c.e106198c47ec127376fe.css">
+  <script charset="utf-8" src="./index_files/chunk-bbbfe64c.62b0e291d22f2fd59bbe.js.下载"></script>
+  <link rel="stylesheet" type="text/css" href="./index_files/chunk-3dd7a085.b4f5756e01a6fac8c3d5.css">
+  <script charset="utf-8" src="./index_files/chunk-3dd7a085.9dd40a92550c4bbd5fa3.js.下载"></script>
+  <script charset="utf-8" src="./index_files/chunk-42bdde2c.b8e22702f438cf770e47.js.下载"></script>
+  <link rel="stylesheet" type="text/css" href="./index_files/chunk-cb5ee0e0.0f0f3dfc443a01cddbd6.css">
+  <script charset="utf-8" src="./index_files/chunk-cb5ee0e0.df28ac242c319259c7f2.js.下载"></script>
+  <link rel="stylesheet" type="text/css" href="./index_files/chunk-9e1ccf30.149e519c72832e85e9de.css">
+  <script charset="utf-8" src="./index_files/chunk-9e1ccf30.5194f921f5305c490757.js.下载"></script>
+</head>
+
+<body class="site_mobile_common" data-new-gr-c-s-check-loaded="14.1020.0" data-gr-ext-installed="">
+  <div id="wxform">
+    <!---->
+    <div class="forms">
+      <div style="height: 0px;"></div>
+      <!---->
+      <div class="toptabla">
+        <div class="toptabla_con">
+          <div class="formsTop_left"><i class="iconfont icon-biaodanyemian"></i>
+            <p class="">请假外出、返校权限查询</p>
+          </div>
+          <!---->
+        </div>
+      </div>
+      <div id="pubilcForms">
+        <div>
+          <div element-loading-custom-class="area-vloading" class="m_formList">
+            <!---->
+            <div class="">
+              <div class="pluginnames"><span
+                  style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">姓名</span>
+                <!---->
+              </div>
+              <!---->
+              <div class="plugin-allbox">
+                <div data-key="User_3" class="dplugin-box"
+                  style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
+                  <div class="dplugin-mobile dplugin-doneplugin dplugin-mobile-dinput"><span
+                      class="doneplugin-value doneplugin-value-userview"
+                      style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 15px; letter-spacing: 0px;">
+                      李文动
+                    </span></div>
+                </div>
+                <!---->
+              </div>
+            </div>
+            <!---->
+            <!---->
+            <div class="">
+              <div class="pluginnames"><span
+                  style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">照片</span>
+                <!---->
+              </div>
+              <!---->
+              <div class="plugin-allbox">
+                <div data-key="Avatar_41" class="dplugin-box"
+                  style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
+                  <div class="dplugin-mobile dplugin-mobile-dAvatar">
+                    <div class="dplugin-mobile-addfileed-box">
+                      <ul id="avatar_Avatar_41_image">
+                        <li class="dplugin-mobile-addfileed" style="width: 1rem; height: auto;"><img
+                            src="./index_files/2019211953_head.jpg">
+                          <!---->
+                        </li>
+                      </ul>
+                    </div>
+                    <!---->
+                    <div class="clear"></div>
+                  </div>
+                  <!---->
+                  <!---->
+                </div>
+                <!---->
+              </div>
+            </div>
+            <div class="mobile_pluginnames_hide">
+              <div class="pluginnames"><span
+                  style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">动态图</span>
+                <!---->
+              </div>
+              <!---->
+              <div class="plugin-allbox">
+                <div data-key="Image_36" class="dplugin-box"
+                  style="margin-top: 0px; margin-bottom: 0px; text-align: left;">
+                  <div class="dplugin-mobile dplugin-mobile-dImage dImageview"><img
+                      src="./index_files/3916676.gif" style="width: 100%; height: 100%;"></div>
+                  <!---->
+                  <!---->
+                </div>
+                <!---->
+              </div>
+            </div>
+            <div class="">
+              <div class="pluginnames"><span
+                  style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">状态码</span>
+                <!---->
+              </div>
+              <!---->
+              <div data-v-0f1589c3="" class="plugin-allbox" plugin="[object Object]">
+                <div data-v-0f1589c3="" data-key="Qrcode_11" class="dplugin-box"
+                  style="margin-top: 0px; margin-bottom: 0px; width: 100%; text-align: center; height: 100%; overflow-x: auto;">
+                  <div data-v-0f1589c3="" class="dplugin-mobile">
+                    <img src="./index_files/green_code.png" width="150" height="150"
+                                     style="height: 150px; width: 150px;">
+                  </div>
+                </div>
+                <!---->
+              </div>
+            </div>
+            <div class="mobile_pluginnames_hide">
+              <div class="pluginnames"><span
+                  style="color: rgb(135, 135, 135); font-size: 18px; font-family: 微软雅黑; line-height: 22px;">状态</span>
+                <!---->
+              </div>
+              <!---->
+              <div class="plugin-allbox">
+                <div data-key="Input_12" class="dplugin-box"
+                  style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
+                  <div class="dplugin-mobile dplugin-mobile-dinput dinput-vie dplugin-mobile-dinput-focusalert"
+                    style="font-size: 18px; font-family: 微软雅黑; font-weight: bold; font-style: normal; color: green; text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;">
+                    <span id="allow_text" onclick="exchangeAllowText()"
+                    class="plugin-data"
+                      style="font-size: 18px; font-family: 微软雅黑; font-weight: bold; font-style: normal; color: green; text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;">允许出校</span>
+                  </div>
+                </div>
+                <!---->
+              </div>
+            </div>
+            <div class="">
+              <div class="pluginnames"><span
+                  style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">学工号</span>
+                <!---->
+              </div>
+              <!---->
+              <div class="plugin-allbox">
+                <div data-key="User_5" class="dplugin-box"
+                  style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
+                  <div class="dplugin-mobile dplugin-doneplugin dplugin-mobile-dinput"><span
+                      class="doneplugin-value doneplugin-value-userview"
+                      style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 15px; letter-spacing: 0px;">
+                      2019211953
+                    </span></div>
+                </div>
+                <!---->
+              </div>
+            </div>
+            <!---->
+            <div class="">
+              <div class="pluginnames"><span
+                  style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">出入校时间</span>
+                <!---->
+              </div>
+              <!---->
+              <div class="plugin-allbox">
+                <div data-key="Calendar_15" class="dplugin-box"
+                  style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
+                  <div class="dplugin-mobile dplugin-mobile-dCalendar dCalendar-vie"
+                    style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;">
+                    <span
+                    id="current_time"  
+                    style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;"></span></div>
+                </div>
+                <!---->
+              </div>
+            </div>
+            <div class="">
+              <div class="pluginnames"><span
+                  style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">学院</span>
+                <!---->
+              </div>
+              <!---->
+              <div class="plugin-allbox">
+                <div data-key="User_22" class="dplugin-box"
+                  style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
+                  <div class="dplugin-mobile dplugin-doneplugin dplugin-mobile-dinput"><span
+                      class="doneplugin-value doneplugin-value-userview"
+                      style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 15px; letter-spacing: 0px;">
+                      计算机学院（国家示范性软件学院）
+                    </span></div>
+                </div>
+                <!---->
+              </div>
+            </div>
+            <!---->
+            <!---->
+            <!---->
+            <!---->
+            <!---->
+            <!---->
+            <!---->
+            <div class="">
+              <div class="pluginnames"><span
+                  style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">扫码校区</span>
+                <!---->
+              </div>
+              <!---->
+              <div class="plugin-allbox">
+                <div data-key="Input_44" class="dplugin-box"
+                  style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
+                  <div class="dplugin-mobile dplugin-mobile-dinput dinput-vie dplugin-mobile-dinput-focusalert"
+                    style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;">
+                    <span class="plugin-data"
+                      style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;">&nbsp;</span>
+                  </div>
+                </div>
+                <!---->
+              </div>
+            </div>
+            <div style="display: none;">
+              <ul>
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <li><span>动态转化：</span>
+                  <div data-key="Conversion_17" class="dplugin-box"
+                    style="margin-top: 0px; margin-bottom: 0px; text-align: left;">
+                    <!---->
+                  </div>
+                </li>
+                <!---->
+                <!---->
+                <!---->
+                <li><span>数据源：</span>
+                  <div data-key="DataSource_23" class="dplugin-box" plugin="[object Object]"
+                    style="margin-top: 0px; margin-bottom: 0px; text-align: left;">
+                    <div>
+                      <div class="el-dialog__wrapper" style="display: none;">
+                        <div role="dialog" aria-modal="true" aria-label="选择数据"
+                          class="el-dialog el-dialog--center rTbaleDialog" style="margin-top: 15vh; width: 90%;">
+                          <div class="el-dialog__header"><span class="el-dialog__title">选择数据</span>
+                            <!---->
+                          </div>
+                          <!---->
+                          <div class="el-dialog__footer"><span class="dialog-footer"><button type="button"
+                                class="el-button el-button--default el-button--small">
+                                <!---->
+                                <!----><span>取 消</span>
+                              </button> <button type="button" class="el-button el-button--primary el-button--small">
+                                <!---->
+                                <!----><span>确 定</span>
+                              </button></span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li><span>验证信息：</span>
+                  <div data-key="Validate_24" class="dplugin-box"
+                    style="margin-top: 0px; margin-bottom: 0px; text-align: left;">
+                    <!---->
+                  </div>
+                </li>
+                <li><span>提示：</span>
+                  <div data-key="Alert_25" class="dplugin-box" plugin="[object Object]"
+                    style="margin-top: 0px; margin-bottom: 0px; text-align: left;">
+                    <!---->
+                    <div class="el-dialog__wrapper" style="display: none;">
+                      <div role="dialog" aria-modal="true" aria-label="禁止扫码" class="el-dialog sele_leave"
+                        style="margin-top: 15vh; width: 310px;">
+                        <div class="el-dialog__header"><span class="el-dialog__title">禁止扫码</span>
+                          <!---->
+                        </div>
+                        <!---->
+                        <!---->
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li><span>提示：</span>
+                  <div data-key="Alert_26" class="dplugin-box" plugin="[object Object]"
+                    style="margin-top: 0px; margin-bottom: 0px; text-align: left;">
+                    <!---->
+                    <div class="el-dialog__wrapper" style="display: none;">
+                      <div role="dialog" aria-modal="true" aria-label="禁止扫码" class="el-dialog sele_leave"
+                        style="margin-top: 15vh; width: 310px;">
+                        <div class="el-dialog__header"><span class="el-dialog__title">禁止扫码</span>
+                          <!---->
+                        </div>
+                        <!---->
+                        <!---->
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+              </ul>
+            </div>
+            <div class="el-loading-mask area-vloading" style="display: none;">
+              <div class="el-loading-spinner"><svg viewBox="25 25 50 50" class="circular">
+                  <circle cx="50" cy="50" r="20" fill="none" class="path"></circle>
+                </svg>
+                <!---->
+              </div>
+            </div>
+          </div>
+          <!---->
+        </div>
+      </div>
+      <!---->
+      <div class="wxformbtn m_start_btn"><button class="draftdiv active">更多</button>
+        <div id="[object Object]" class="wxformbtn_center">
+          <!---->
+        </div>
+        <!---->
+      </div>
+    </div>
+    <div class="processimg"><img
+        src="data:image/png;base64,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"
+        alt="" class="imgbtn">
+      <div class="svg"></div>
+    </div>
+    <div class="showBpmn_class" style="display: none;"></div>
+    <div class="draftbox" style="display: none;">
+      <div class="bg"></div>
+      <ul>
+        <li>载入草稿</li>
+        <li id="savedraft">保存到草稿箱</li>
+        <li>取消</li>
+      </ul>
+    </div>
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <div class="el-dialog__wrapper" style="display: none;">
+      <div role="dialog" aria-modal="true" aria-label="添加人员" class="el-dialog el-dialog--center dialog_search_user"
+        style="margin-top: 15vh; width: 300px;">
+        <div class="el-dialog__header"><span class="el-dialog__title">添加人员</span><button type="button"
+            aria-label="Close" class="el-dialog__headerbtn"><i
+              class="el-dialog__close el-icon el-icon-close"></i></button></div>
+        <!---->
+        <div class="el-dialog__footer"><span class="dialog-footer"><button type="button"
+              class="el-button el-button--default">
+              <!---->
+              <!----><span>取 消</span>
+            </button> <button type="button" class="el-button el-button--primary">
+              <!---->
+              <!----><span>确 定</span>
+            </button></span></div>
+      </div>
+    </div>
+    <div class="el-dialog__wrapper" style="display: none;">
+      <div role="dialog" aria-modal="true" aria-label="dialog" class="el-dialog el-dialog--center dialog_agent_depart"
+        style="margin-top: 15vh; width: 300px;">
+        <div class="el-dialog__header"><span class="el-dialog__title"></span><button type="button" aria-label="Close"
+            class="el-dialog__headerbtn"><i class="el-dialog__close el-icon el-icon-close"></i></button></div>
+        <!---->
+        <div class="el-dialog__footer"><span class="dialog-footer"><button type="button"
+              class="el-button el-button--default">
+              <!---->
+              <!----><span>取 消</span>
+            </button> <button type="button" class="el-button el-button--primary">
+              <!---->
+              <!----><span>确 定</span>
+            </button></span></div>
+      </div>
+    </div>
+    <!---->
+    <div class="el-dialog__wrapper" style="display: none;">
+      <div role="dialog" aria-modal="true" aria-label="dialog" class="el-dialog" style="margin-top: 15vh; width: 80%;">
+        <div class="el-dialog__header"><span class="el-dialog__title"></span>
+          <!---->
+        </div>
+        <!---->
+        <!---->
+      </div>
+    </div>
+    <div>
+      <div class="el-dialog__wrapper" style="display: none;">
+        <div role="dialog" aria-modal="true" aria-label="提示"
+          class="el-dialog el-dialog--center common_tip_dialog submit_layer" style="margin-top: 15vh;">
+          <div class="el-dialog__header"><span class="el-dialog__title">提示</span>
+            <!---->
+          </div>
+          <!---->
+          <div class="el-dialog__footer"><span class="dialog-footer"><button
+                class="zl-button zl-button-line zl-button-auto zl-button-mini">返回修改 <i
+                  class="iconfont iconarrowdown"></i></button>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <button class="zl-button zl-button-primary zl-button-fixed zl-button-mini">确定 <i
+                  class="iconfont iconarrowdown"></i></button></span></div>
+        </div>
+      </div>
+    </div>
+    <!---->
+    <!---->
+    <!----> <svg viewBox="25 25 50 50" class="dataSourceLoading" style="display: none;">
+      <circle cx="50" cy="50" r="20" fill="none" class="path"></circle>
+    </svg>
+  </div><iframe id="printCasLogout" style="display: none;" src="./index_files/saved_resource.html"></iframe>
+  <script>if (window.location.href.indexOf("debug=1") !== -1) {
       var jsScript = document.createElement("script");
       jsScript.src = "/v2/static/js/common/vconsole.min.js";
       jsScript.type = "text/javascript";
@@ -204,4 +634,38 @@
       };
 
       document.getElementsByTagName("body")[0].appendChild(jsScript);
-    }</script><script src="./请假外出、返校权限查询通行码_files/chunk-vendors.fedd5d3739d14c0d3e72.js.下载"></script><script src="./请假外出、返校权限查询通行码_files/chunk-common.15c54c0d64d2d602c51d.js.下载"></script><script src="./请假外出、返校权限查询通行码_files/index.11da650eafb0fee9c756.js.下载"></script><div id="progress_loading" style="display: none;"><div style="width: 0%;"></div></div><script src="./请假外出、返校权限查询通行码_files/signature_pad.min.js.下载" data-id="9ea1316a58bf6f41ac212b3b8fa833c3" type="text/javascript" data-path="js/signature_pad.min.js" source-type="other" page-path="/matter/m_start"></script><img id="visits_collect" src="./请假外出、返校权限查询通行码_files/collect" style="display: none;"><link href="./请假外出、返校权限查询通行码_files/viewer.css" data-id="0b00945e93e15d25c81c2994f36d38a0" type="text/css" rel="stylesheet" source-type="other" source-status="loaded" page-path="/matter/m_start"><script src="./请假外出、返校权限查询通行码_files/viewer.js.下载" data-id="19f29a1630443be25a9882859cadf094" type="text/javascript" source-type="other" source-status="loaded" page-path="/matter/m_start"></script><div id="page_load_finished" style="display:none;"></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
+    }</script>
+  <script src="./index_files/chunk-vendors.fedd5d3739d14c0d3e72.js.下载"></script>
+  <script src="./index_files/chunk-common.15c54c0d64d2d602c51d.js.下载"></script>
+  <script src="./index_files/index.11da650eafb0fee9c756.js.下载"></script>
+  <div id="progress_loading" style="display: none;">
+    <div style="width: 0%;"></div>
+  </div>
+  <script src="./index_files/signature_pad.min.js.下载" data-id="9ea1316a58bf6f41ac212b3b8fa833c3"
+    type="text/javascript" data-path="js/signature_pad.min.js" source-type="other" page-path="/matter/m_start"></script>
+  <img id="visits_collect" src="./index_files/collect" style="display: none;">
+  <link href="./index_files/viewer.css" data-id="0b00945e93e15d25c81c2994f36d38a0" type="text/css"
+    rel="stylesheet" source-type="other" source-status="loaded" page-path="/matter/m_start">
+  <script src="./index_files/viewer.js.下载" data-id="19f29a1630443be25a9882859cadf094" type="text/javascript"
+    source-type="other" source-status="loaded" page-path="/matter/m_start"></script>
+  <div id="page_load_finished" style="display:none;"></div>
+</body>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+<script type="text/javascript">
+    window.onload = function () {
+        //方法内容
+        var currentDate = new Date();
+        var time = currentDate.toLocaleString('chinese', {hour12: false}).split('/').join('-');
+        document.getElementById("current_time").innerHTML = time;
+    }
+
+    function exchangeAllowText() {
+        var element = document.getElementById("allow_text")
+        if (element.innerHTML == "允许出校") {
+            element.innerHTML = "允许入校";
+        } else {
+            element.innerHTML = "允许出校";
+        }
+    }
+</script>
+</html>
